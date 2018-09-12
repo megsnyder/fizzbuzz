@@ -1,7 +1,7 @@
 """
 fizzbuzz.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Meg
+Credit: https://stackoverflow.com/questions/14553349/printing-multiples-of-numbers (multiples)
 
 Assignment:
 
@@ -44,3 +44,21 @@ Fizz
 Fizz
 Buzz
 """
+
+num = int(input("How many numbers shall we print? "))
+f = int(input("For multiples of what number shall we print 'Fizz'? "))
+b = int(input("For multiples of what number shall we print 'Buzz'? "))
+
+i=1
+fizz = type(f)*int
+buzz = type(b)*int
+for i in range(1,num+1):
+    if i==fizz and i!=buzz:
+        print("Fizz")
+    elif i==buzz and i!=fizz:
+        print("Buzz")
+    elif i==buzz and i==fizz:
+        print("FizzBuzz")
+    else:
+        print(i)
+    i+=1
