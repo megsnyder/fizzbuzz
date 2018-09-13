@@ -2,6 +2,7 @@
 fizzbuzz.py
 Author: Meg
 Credit: https://stackoverflow.com/questions/14553349/printing-multiples-of-numbers (multiples)
+https://stackoverflow.com/questions/15881724/python-multiply-range (another attempt at multiples)
 
 Assignment:
 
@@ -46,18 +47,17 @@ Buzz
 """
 
 num = int(input("How many numbers shall we print? "))
-f = int(input("For multiples of what number shall we print 'Fizz'? "))
-b = int(input("For multiples of what number shall we print 'Buzz'? "))
+fizz = int(input("For multiples of what number shall we print 'Fizz'? "))
+buzz = int(input("For multiples of what number shall we print 'Buzz'? "))
 
 i=1
-fizz = type(f)*int
-buzz = type(b)*int
+
 for i in range(1,num+1):
-    if i==fizz and i!=buzz:
+    if i%fizz==0 and i%buzz!=0:
         print("Fizz")
-    elif i==buzz and i!=fizz:
+    elif i%buzz==0 and i%fizz!=0:
         print("Buzz")
-    elif i==buzz and i==fizz:
+    elif i%fizz==0 and i%buzz==0:
         print("FizzBuzz")
     else:
         print(i)
